@@ -1,0 +1,39 @@
+{
+  "name": "eslint-input-miss",
+  "main": "index.ts",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@pulumi/eslint-plugin": "^0.1.0-rc3",
+    "@types/node": "^18",
+    "@typescript-eslint/eslint-plugin": "^5.47.0",
+    "@typescript-eslint/parser": "^5.47.0",
+    "eslint": "^8.30.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "@pulumi/aws": "^5.24.0",
+    "@pulumi/pulumi": "^3.50.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "plugins": [
+      "@typescript-eslint",
+      "@pulumi/eslint-plugin"
+    ],
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "root": true
+  }
+}
